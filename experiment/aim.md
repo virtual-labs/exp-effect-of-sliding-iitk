@@ -1,1 +1,1 @@
-<b>Effect of sliding speed on wear of materials</b>
+Effect of sliding speed on wear of materials
