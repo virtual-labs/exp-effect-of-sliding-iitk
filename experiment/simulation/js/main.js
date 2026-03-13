@@ -613,7 +613,7 @@ function showCalculation() {
       cof: "0.41±0.06",
       dmax: "23 µm",
       SpWr1: "1.3×10⁻³",
-      Wr1: "1.6×10⁻²",
+      Wr1: "1.3×10⁻²",
       Wr2: "1.3×10⁻²"
     });
   } else if (selectedRPM === "50") {
@@ -629,7 +629,7 @@ function showCalculation() {
       cof: "0.45±0.07",
       dmax: "33 µm",
       SpWr1: "1.2×10⁻³",
-      Wr1: "4.4×10⁻²",
+      Wr1: "1.1×10⁻²",
       Wr2: "1.1×10⁻²"
     });
   } else {
@@ -709,9 +709,21 @@ function showinitialMessage() {
 function showCleanMessage() {
   document.getElementById("cleanMessage").style.display = "block";
 }
-
 function showWeightMessage() {
-  document.getElementById("weightMessage").style.display = "block";
+  const weightBox = document.getElementById("weightMessage");
+  const finalMassText = document.getElementById("finalMassText");
+
+  weightBox.style.display = "block";
+
+  if (selectedRPM === "25") {
+    finalMassText.innerHTML = "<b>Final mass of the Sample m₂ = 16.444 g</b>";
+  } 
+  else if (selectedRPM === "50") {
+    finalMassText.innerHTML = "<b>Final mass of the Sample m₂ = 16.436 g</b>";
+  } 
+  else {
+    finalMassText.innerHTML = "<b style='color:red'>Please select RPM first.</b>";
+  }
 }
 
 function showcMessage() {
@@ -755,3 +767,32 @@ function markClicked(button) {
     // Add tick to the clicked one
     button.classList.add('clicked');
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function resetExperiment() {
+    location.reload();
+}
