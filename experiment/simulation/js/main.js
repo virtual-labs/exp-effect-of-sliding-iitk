@@ -646,7 +646,7 @@ function generateTable(data) {
       </tr>
       <tr><td>Sample<br>(Ra = Sample roughness)<br> Obtained from Tribometer</td><td>${data.sample}</td></tr>
       <tr><td>Load</td><td>${data.load}</td></tr>
-      
+      <tr><td>RPM</td><td>${data.speed}</td></tr>
       <tr>
   <td>Mass Loss<br>Δm = m₁ − m₂</td>
   <td>${data.Δm} g</td>
