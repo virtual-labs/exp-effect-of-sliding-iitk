@@ -710,7 +710,24 @@ function showCleanMessage() {
   document.getElementById("cleanMessage").style.display = "block";
 }
 function showWeightMessage() {
-  const weightBox = document.getElementById("weightMessage");
+  
+  let m1 = 16.445;  // initial mass
+
+  // choose deltaM based on selected load
+  let deltaM = 0;
+
+  if (selectedRPM === "25") {
+    deltaM = 0.001;
+  } else if (selectedRPM === "50") {
+    deltaM = 0.009;
+  }
+
+  let m2 = m1 - deltaM;
+
+  document.getElementById("m2Value").textContent = m2.toFixed(3);
+  document.getElementById("weightMessage").style.display = "block";
+
+  /*const weightBox = document.getElementById("weightMessage");
   const finalMassText = document.getElementById("finalMassText");
 
   weightBox.style.display = "block";
@@ -723,7 +740,7 @@ function showWeightMessage() {
   } 
   else {
     finalMassText.innerHTML = "<b style='color:red'>Please select RPM first.</b>";
-  }
+  }*/
 }
 
 function showcMessage() {
