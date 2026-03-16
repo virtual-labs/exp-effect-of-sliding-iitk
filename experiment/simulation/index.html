@@ -103,8 +103,12 @@
 
 					<button class="button button1 B hidden" id="measureWeightBtn" onclick="showWeightMessage()">Measure
 						the Weight</button>
-					<div id="weightMessage" class="message-text" style="display: none; margin-top: 5px;"><b> Weight
-						measured successfully.</b><b>Final mass of the Sample m2=16.444g</b></div>
+					<!--<div id="weightMessage" class="message-text" style="display: none; margin-top: 5px;"><b> Weight
+						measured successfully.</b><b>Final mass of the Sample m2=16.444g</b></div>-->
+					<div id="weightMessage" class="message-text" style="display:none; margin-top:5px;">
+					<b>Weight measured successfully.</b>
+					<b>Final mass of the Sample m2 = <span id="m2Value"></span> g</b>
+					</div>
 
 					<button class="button button1 hidden B" id="moveButton8" onclick="showResult()">Perform Optical
 						Profilometry</button>
@@ -2091,8 +2095,7 @@
 									</linearGradient>
 									<path
 										style="fill:none;stroke:url(#SVGID_00000013887025020851227020000013832601992509365133_);stroke-miterlimit:10;"
-										d="
-		   M945.8,677.9" />
+										d="M945.8,677.9" />
 								</g>
 								<g>
 
@@ -4319,25 +4322,25 @@
 						<button id="origBtn">Original Image</button>
 						<button id="nextBtn">X-Profile</button>
 					</div>
-					<!-- <div id="calculationContainer" style="display:none; margin-top:20px;"></div> -->
 				</div>
-<div id="cMessage" class="message-text"
-						style="display:none;
-						margin-left:80px;
-    position: static;
-    bottom: 30px;
-	width:fit-content;
-    left: 55%;
-    transform: translateX(0%);
-	transform: translateY(-10%);
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #f9f9f9;
-    padding: 12px 24px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    text-align: center;">
+					<div id="cMessage" class="message-text"
+											style="display:none;
+											margin-left:80px;
+						position: static;
+						bottom: 0px;
+						margin-left: 100px;
+						width:fit-content;
+						left: 55%;
+						transform: translateX(30%);
+						transform: translateY(-10%);
+						font-size: 25px;
+						font-weight: bold;
+						background-color: transparent;
+						padding: 0;
+						border-radius: 0px;
+						box-shadow: none;
+						z-index: 1;
+						text-align: bottom;">
 						Conclusion:
 						As the sliding speed (RPM) increases, the wear rate of the material also increases.
 					</div>
